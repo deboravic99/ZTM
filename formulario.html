@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulário</title>
+</head>
+<body>
+	<h1>Itens de formulário</h1>
+	<!-- Use POST not GET. GET: Never use GET to send sensitive data! (will be visible in the URL). POST: Appends form-data inside the body of the HTTP request (data is not shown in URL). -->
+	<form method="POST">
+		<p>Primeiro nome: <input type="text" name="firstname"></p>
+		<p>Segundo nome: <input type="text" name="lastname"></p>
+		<p>E-mail: <input type="email" name="email" required></p>
+		<p>Senha: <input type="password" name="password" min="5"></p>
+		<p>Data de nascimento: <input type="date" name="birthday"></p><hr>
+		Gênero<br>
+		<input type="radio" name="genero" value="Feminino">Feminino<br>
+		<input type="radio" name="genero" value="Masculino">Masculino<br>
+		<input type="radio" name="genero" value="Outro">Outro
+		<p>Além do valor type='radio' na tag &lt;input&gt; para marcar opções, pode-se usar a tag <mark>&lt;select&gt;</mark> para um quadro de opções na vertical. Por exemplo:</p>
+		Gênero:
+		<select name="genero">
+			<option value="feminino" name="feminino">Feminino</option>
+			<option value="masculino" name="masculino">Masculino</option>
+			<option value="outro" name="outro">Outro</option>
+		</select>
+		<p><hr>
+		Coisas que você tem na sua casa: <br>
+			<input type="checkbox">TV<br>
+			<input type="checkbox">Computador<br>
+			<input type="checkbox">Geladeira<br>
+			<input type="checkbox">Fogão<br>
+			<input type="checkbox">Animais<br>
+		</p>
+		<input type="submit" value="Enviar">
+		<input type="reset">
+	</form>
+</body>
+</html>
